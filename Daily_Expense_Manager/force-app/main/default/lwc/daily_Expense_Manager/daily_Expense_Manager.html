@@ -1,0 +1,269 @@
+<template>
+	<!-- Home Page -->
+	<template if:true={showHomeOrSettingsPage}>
+		<lightning-card>
+			<div class="slds-card">
+				<!--Start of title and setting btn  -->
+				<lightning-layout>
+					<lightning-layout-item flexibility="auto" padding="around-small">
+						<div>
+							<h1>
+								<span style="color:blue;font-size:20px;">Daily Expense Manager </span>
+							</h1>
+						</div>
+                    </lightning-layout-item>
+                    <!-- Settings button -->
+					<lightning-layout-item flexibility="auto, no-grow" padding="around-small">
+						<div>
+							<p>
+                                <lightning-button-icon icon-name="utility:settings" 
+                                                       variant="border-filled"
+                                                       onclick={settingsHandler} 
+                                                       alternative-text="Settings" 
+                                                       title="Settings">
+                                </lightning-button-icon>
+							</p>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+				<div class="list-last"></div>
+				<!--end of title and setting btn  -->
+				<!--  -->
+				<!-- Start of multiple input fields  -->
+				<lightning-layout multiple-rows>
+                    <!-- Date input field -->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-input type="date" 
+                                         name="date " 
+                                         label="Select Date" 
+										 required 
+										 value={currentDate}
+										 placeholder="Select Date"
+                                         onchange={dateChangeHandler}>
+						</lightning-input>
+                    </lightning-layout-item>
+                    <!-- Category input field -->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-combobox name="expenseCategory"
+                                            label="Category" 
+                                            value={expenseCategory} 
+                                            options={categoryOptions} 
+                                            placeholder="Select Category" 
+                                            onchange={expenseCategoryChangeHandler} 
+                                            required>
+						</lightning-combobox>
+                    </lightning-layout-item>
+                    <!-- Amount input field -->
+					<lightning-layout-item size="12">						
+						<div class="slds-grid slds-wrap">
+							<div class="slds-m-around_small">								
+								<lightning-input 	type="number"
+													name="amount" 
+													step=".01"
+													placeholder="Enter Amount"
+													value={amount}
+													class="amount" 
+													label="Amount (max 8 digits upto two decimals)" 
+													max-length="11" 
+													max="99999999.99" 
+													min="0" 
+													message-when-value-missing="Please enter the data" 
+													message-when-range-underflow="Number should be positive" 
+													required 
+													message-when-range-overflow="The amount should be in the range (0 - 99999999.99)" 
+													message-when-step-mismatch="The amount should be in the range (0 - 99999999.99)" 
+													onchange={amountChangeHandler}>
+								</lightning-input>								
+							</div>
+							<div>
+								<div class="slds-grid slds-grid_vertical">
+									<div class="slds-col">
+										<span style="color: white;visibility: hidden;">{currencySymbol}</span>
+									</div>
+									<div class="slds-col">
+										<span style="color: white;visibility: hidden;">{currencySymbol}</span>
+									</div>
+									<div class="slds-col ">
+										<span style="font-size:18px;">{currencySymbol}</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</lightning-layout-item>
+					<lightning-layout multiple-rows="true" class="x-large">
+                    </lightning-layout>
+                    <!-- Remarks input field -->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-input label="Remarks (max 25 characters)" 
+                                         name="remarks" 
+                                         message-when-range-overflow="Your entry must be at less than 20 characters." 
+                                         max-length="25" 
+										 onmouseover={remarks}
+										 value={remarks}
+										 placeholder="Enter Remarks"
+                                         message-when-too-long="Your entry must be at less than 20 characters." 
+                                         onchange={remarksChangeHandler} >
+						</lightning-input>
+                    </lightning-layout-item>
+                    <!-- Add button -->
+					<lightning-layout-item size="12" padding="around-small">
+						<lightning-button label="Add" class="add" icon-position="left" onclick={createExpenseHandler}>                            
+                        </lightning-button>
+					</lightning-layout-item>
+				</lightning-layout>
+				<!-- End of multiple input rows -->
+			</div>
+			<div class="list-first"></div>	
+			<div class="slds-p-around_xx-small">
+				<!-- Records List -->				
+					<article class="slds-card">
+						<div class="slds-card__header slds-grid">
+							<header class="slds-media slds-media_center slds-has-flexi-truncate">
+								<div class="slds-media__body">
+									<!-- <h2 class="slds-card__header-title">						 -->
+									<span style="color:blue;font-size:16px"><b>Date: </b></span>
+									<span style="color:black;font-size:15px"><b>{currentDateFormatted}</b></span>
+									<!-- </h2> -->
+								</div>
+								<div class="slds-no-flex">
+									<span style="color:blue;font-size:16px"><b>Total: </b></span>
+									<span style="color:black;font-size:15px"><b>{currencySymbol} {sumExpense}</b></span>
+								</div>
+							</header>
+						</div>
+					</article>
+					<template for:each={dataOfGetSelectedDateExpenses} for:item="expenseData">
+						<!-- <li key={expenseData.id} > -->
+							<article class="list-first-grey" key={expenseData.id}>
+								<div class="slds-grid">
+									<header class="slds-media slds-has-flexi-truncate">
+									<div class="slds-media__body">
+									<!-- <h2 class="slds-card__header-title">								 -->
+									<b><span class="slds-p-left_small" style="color:#135fac;font-size:16px">{expenseData.PSI_DEM__ExpenseCategory__c}</span></b>							
+									<!-- </h2> -->
+									</div>
+									<div class="slds-no-flex">
+									<!-- <button class="slds-button slds-button_neutral">New</button> -->
+									<b><span class="slds-p-right_large" style="color:black;font-size:15px">{expenseData.PSI_DEM__Default_Currency__c}</span></b>
+									</div>
+									</header>
+								</div>
+								<div class="slds-p-left_small slds-p-bottom_xx-small" style="color:grey;font-size:14px">{expenseData.PSI_DEM__ExpenseRemarks__c}</div>
+							</article>
+						<!-- </li> -->
+					</template>
+					<div class="list-last"></div>					
+			</div>			
+		</lightning-card>
+	</template>
+	<!-- Settings Page -->
+	<template if:false={showHomeOrSettingsPage}>
+		<!--  -->
+		<lightning-card>
+			<div class="slds-card slds-p-around_xx-small">
+				<lightning-layout>
+					<lightning-layout-item flexibility="auto" padding="around-small">
+						<div>
+							<h1>
+								<span style="color:blue;font-size:20px;">Settings </span>
+							</h1>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item flexibility="auto, no-grow" padding="around-small">
+						<div>
+							<p>
+                                <lightning-button variant="brand-outline" 
+                                                  label="Back" 
+                                                  onclick={backToExpensePageHandler}>
+                                </lightning-button>
+							</p>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+				<div class="list-last"></div>
+				<!--  -->
+				<lightning-layout multiple-rows>
+                    <!-- Default Category Picklist -->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-combobox name="defaultExpenseCategory" 
+                                            label="Default Expense Category" 
+                                            value={defaultExpenseCategory} 
+                                            options={categoryOptions} 
+                                            placeholder="Select Default Category" 
+                                            onchange={addDefaultExpenseCategoryHandler}
+                                            required>
+						</lightning-combobox>
+                    </lightning-layout-item>
+                    <!-- Default Currency Picklist -->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-combobox name="Currency"
+                                            label="Select Currency" 
+                                            value={currencyType}
+                                            options={currencyOptions} 
+                                            placeholder={currencyType}
+                                            onchange={currencyTypeChangeHandler}
+                                            required>
+						</lightning-combobox>
+					</lightning-layout-item>
+					<!-- Add Category Input field-->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-input type="text" 
+                                         name="addNewCategory" 
+                                         label="Add New Category (max 15 characters)" 
+                                         value={newExpenseCategory}
+                                         placeholder="Enter New Category" 
+                                         max-length="15" 
+                                         min-length="3" 
+                                         message-when-too-short="min 3 characters required" 
+                                         onchange={newExpenseCategoryHandler}>
+						</lightning-input>
+					</lightning-layout-item>
+					<!-- Add Category Button-->
+					<lightning-layout-item size="12" padding="around-small">
+                        <lightning-button label="Add Category" 
+                                          icon-position="center" 
+                                          onclick={addNewCategoryHandler}>
+                        </lightning-button>
+					</lightning-layout-item>
+					<!-- Show Available Categories -->
+					<lightning-layout-item size="12" padding="around-small">
+						<h1 style="font-size:15px;">Available Category</h1>
+						<ul>
+							<div class="list-first"></div>
+							<template for:each={categories} for:item="category" for:index="indx">
+								<li key={category.id} >
+									<!--  -->
+									<lightning-layout>
+										<lightning-layout-item flexibility="auto" padding="around-small">
+											<div>
+												<h1>
+													<span style="color:blue;">{category.value}</span>
+												</h1>
+											</div>
+										</lightning-layout-item>
+										<lightning-layout-item flexibility="auto, no-grow" padding="around-small" if:false={errorCheck}>
+											<div>
+												<p>
+													<lightning-button-icon icon-name="utility:delete" 
+																		   alternative-text="Delete" 
+																		   class="slds-m-left_xx-small" 
+																		   title="Delete" 
+																		   data-id={indx} 
+																		   onclick={deleteValueHandler}>
+                                                    </lightning-button-icon>
+                                                </p>
+											</div>
+										</lightning-layout-item>										
+									</lightning-layout>
+									<!--  -->
+								</li>
+							</template>
+							<div class="list-last"></div>
+						</ul>
+					</lightning-layout-item>
+				</lightning-layout>
+			</div>
+		</lightning-card>
+	</template>
+</template>

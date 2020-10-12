@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Default_Currency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Currency</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpenseAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expense Amount</label>
+        <precision>12</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ExpenseCategory__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expense Category</label>
+        <length>20</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpenseCurrency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expense Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lek (Albania)</fullName>
+                    <default>false</default>
+                    <label>Lek (Albania)</label>
+                </value>
+                <value>
+                    <fullName>؋ (Afghanistan)</fullName>
+                    <default>false</default>
+                    <label>؋ (Afghanistan)</label>
+                </value>
+                <value>
+                    <fullName>$ (Argentina)</fullName>
+                    <default>false</default>
+                    <label>$ (Argentina)</label>
+                </value>
+                <value>
+                    <fullName>ƒ (Aruba)</fullName>
+                    <default>false</default>
+                    <label>ƒ (Aruba)</label>
+                </value>
+                <value>
+                    <fullName>$ (Australia)</fullName>
+                    <default>false</default>
+                    <label>$ (Australia)</label>
+                </value>
+                <value>
+                    <fullName>₼ (Azerbaijan)</fullName>
+                    <default>false</default>
+                    <label>₼ (Azerbaijan)</label>
+                </value>
+                <value>
+                    <fullName>$ (Bahamas)</fullName>
+                    <default>false</default>
+                    <label>$ (Bahamas)</label>
+                </value>
+                <value>
+                    <fullName>$ (Barbados)</fullName>
+                    <default>false</default>
+                    <label>$ (Barbados)</label>
+                </value>
+                <value>
+                    <fullName>p. (Belarus)</fullName>
+                    <default>false</default>
+                    <label>p. (Belarus)</label>
+                </value>
+                <value>
+                    <fullName>BZ$ (Belize)</fullName>
+                    <default>false</default>
+                    <label>BZ$ (Belize)</label>
+                </value>
+                <value>
+                    <fullName>$ (Bermuda)</fullName>
+                    <default>false</default>
+                    <label>$ (Bermuda)</label>
+                </value>
+                <value>
+                    <fullName>$b (Bolivia)</fullName>
+                    <default>false</default>
+                    <label>$b (Bolivia)</label>
+                </value>
+                <value>
+                    <fullName>KM (Bosnia and Herzegovina)</fullName>
+                    <default>false</default>
+                    <label>KM (Bosnia and Herzegovina)</label>
+                </value>
+                <value>
+                    <fullName>P (Botswana)</fullName>
+                    <default>false</default>
+                    <label>P (Botswana)</label>
+                </value>
+                <value>
+                    <fullName>лв (Bulgaria)</fullName>
+                    <default>false</default>
+                    <label>лв (Bulgaria)</label>
+                </value>
+                <value>
+                    <fullName>R$ (Brazil)</fullName>
+                    <default>false</default>
+                    <label>R$ (Brazil)</label>
+                </value>
+                <value>
+                    <fullName>$ (Brunei)</fullName>
+                    <default>false</default>
+                    <label>$ (Brunei)</label>
+                </value>
+                <value>
+                    <fullName>៛ (Cambodia)</fullName>
+                    <default>false</default>
+                    <label>៛ (Cambodia)</label>
+                </value>
+                <value>
+                    <fullName>$ (Canada)</fullName>
+                    <default>false</default>
+                    <label>$ (Canada)</label>
+                </value>
+                <value>
+                    <fullName>$ (Cayman)</fullName>
+                    <default>false</default>
+                    <label>$ (Cayman)</label>
+                </value>
+                <value>
+                    <fullName>$ (Chile)</fullName>
+                    <default>false</default>
+                    <label>$ (Chile)</label>
+                </value>
+                <value>
+                    <fullName>¥ (China)</fullName>
+                    <default>false</default>
+                    <label>¥ (China)</label>
+                </value>
+                <value>
+                    <fullName>$ (Colombia)</fullName>
+                    <default>false</default>
+                    <label>$ (Colombia)</label>
+                </value>
+                <value>
+                    <fullName>₡ (Costa Rica)</fullName>
+                    <default>false</default>
+                    <label>₡ (Costa Rica)</label>
+                </value>
+                <value>
+                    <fullName>kn (Croatia)</fullName>
+                    <default>false</default>
+                    <label>kn (Croatia)</label>
+                </value>
+                <value>
+                    <fullName>₱ (Cuba)</fullName>
+                    <default>false</default>
+                    <label>₱ (Cuba)</label>
+                </value>
+                <value>
+                    <fullName>Kč (Czech Republic)</fullName>
+                    <default>false</default>
+                    <label>Kč (Czech Republic)</label>
+                </value>
+                <value>
+                    <fullName>kr (Denmark)</fullName>
+                    <default>false</default>
+                    <label>kr (Denmark)</label>
+                </value>
+                <value>
+                    <fullName>RD$ (Dominican Republic)</fullName>
+                    <default>false</default>
+                    <label>RD$ (Dominican Republic)</label>
+                </value>
+                <value>
+                    <fullName>£ (Egypt)</fullName>
+                    <default>false</default>
+                    <label>£ (Egypt)</label>
+                </value>
+                <value>
+                    <fullName>$ (El Salvador)</fullName>
+                    <default>false</default>
+                    <label>$ (El Salvador)</label>
+                </value>
+                <value>
+                    <fullName>kr (Estonia)</fullName>
+                    <default>false</default>
+                    <label>kr (Estonia)</label>
+                </value>
+                <value>
+                    <fullName>€ (Euro Member)</fullName>
+                    <default>false</default>
+                    <label>€ (Euro Member)</label>
+                </value>
+                <value>
+                    <fullName>£ (Falkland Islands)</fullName>
+                    <default>false</default>
+                    <label>£ (Falkland Islands)</label>
+                </value>
+                <value>
+                    <fullName>$ (Fiji)</fullName>
+                    <default>false</default>
+                    <label>$ (Fiji)</label>
+                </value>
+                <value>
+                    <fullName>₾ (Georgia)</fullName>
+                    <default>false</default>
+                    <label>₾ (Georgia)</label>
+                </value>
+                <value>
+                    <fullName>¢ (Ghana)</fullName>
+                    <default>false</default>
+                    <label>¢ (Ghana)</label>
+                </value>
+                <value>
+                    <fullName>£ (Gibraltar)</fullName>
+                    <default>false</default>
+                    <label>£ (Gibraltar)</label>
+                </value>
+                <value>
+                    <fullName>Q (Guatemala)</fullName>
+                    <default>false</default>
+                    <label>Q (Guatemala)</label>
+                </value>
+                <value>
+                    <fullName>£ (Guernsey)</fullName>
+                    <default>false</default>
+                    <label>£ (Guernsey)</label>
+                </value>
+                <value>
+                    <fullName>$ (Guyana)</fullName>
+                    <default>false</default>
+                    <label>$ (Guyana)</label>
+                </value>
+                <value>
+                    <fullName>L (Honduras)</fullName>
+                    <default>false</default>
+                    <label>L (Honduras)</label>
+                </value>
+                <value>
+                    <fullName>$ (Hong Kong)</fullName>
+                    <default>false</default>
+                    <label>$ (Hong Kong)</label>
+                </value>
+                <value>
+                    <fullName>Ft (Hungary)</fullName>
+                    <default>false</default>
+                    <label>Ft (Hungary)</label>
+                </value>
+                <value>
+                    <fullName>kr (Iceland)</fullName>
+                    <default>false</default>
+                    <label>kr (Iceland)</label>
+                </value>
+                <value>
+                    <fullName>₹ (India)</fullName>
+                    <default>false</default>
+                    <label>₹ (India)</label>
+                </value>
+                <value>
+                    <fullName>Rp (Indonesia)</fullName>
+                    <default>false</default>
+                    <label>Rp (Indonesia)</label>
+                </value>
+                <value>
+                    <fullName>﷼ (Iran)</fullName>
+                    <default>false</default>
+                    <label>﷼ (Iran)</label>
+                </value>
+                <value>
+                    <fullName>£ (Isle of Man)</fullName>
+                    <default>false</default>
+                    <label>£ (Isle of Man)</label>
+                </value>
+                <value>
+                    <fullName>₪ (Israel)</fullName>
+                    <default>false</default>
+                    <label>₪ (Israel)</label>
+                </value>
+                <value>
+                    <fullName>J$ (Jamaica)</fullName>
+                    <default>false</default>
+                    <label>J$ (Jamaica)</label>
+                </value>
+                <value>
+                    <fullName>¥ (Japan)</fullName>
+                    <default>false</default>
+                    <label>¥ (Japan)</label>
+                </value>
+                <value>
+                    <fullName>£ (Jersey)</fullName>
+                    <default>false</default>
+                    <label>£ (Jersey)</label>
+                </value>
+                <value>
+                    <fullName>лв (Kazakhstan)</fullName>
+                    <default>false</default>
+                    <label>лв (Kazakhstan)</label>
+                </value>
+                <value>
+                    <fullName>₩ (Korea (North))</fullName>
+                    <default>false</default>
+                    <label>₩ (Korea (North))</label>
+                </value>
+                <value>
+                    <fullName>₩ (Korea (South))</fullName>
+                    <default>false</default>
+                    <label>₩ (Korea (South))</label>
+                </value>
+                <value>
+                    <fullName>лв (Kyrgyzstan)</fullName>
+                    <default>false</default>
+                    <label>лв (Kyrgyzstan)</label>
+                </value>
+                <value>
+                    <fullName>₭ (Laos)</fullName>
+                    <default>false</default>
+                    <label>₭ (Laos)</label>
+                </value>
+                <value>
+                    <fullName>Ls (Latvia)</fullName>
+                    <default>false</default>
+                    <label>Ls (Latvia)</label>
+                </value>
+                <value>
+                    <fullName>£ (Lebanon)</fullName>
+                    <default>false</default>
+                    <label>£ (Lebanon)</label>
+                </value>
+                <value>
+                    <fullName>$ (Liberia)</fullName>
+                    <default>false</default>
+                    <label>$ (Liberia)</label>
+                </value>
+                <value>
+                    <fullName>Lt (Lithuania)</fullName>
+                    <default>false</default>
+                    <label>Lt (Lithuania)</label>
+                </value>
+                <value>
+                    <fullName>ден (Macedonia)</fullName>
+                    <default>false</default>
+                    <label>ден (Macedonia)</label>
+                </value>
+                <value>
+                    <fullName>RM (Malaysia)</fullName>
+                    <default>false</default>
+                    <label>RM (Malaysia)</label>
+                </value>
+                <value>
+                    <fullName>₨ (Mauritius)</fullName>
+                    <default>false</default>
+                    <label>₨ (Mauritius)</label>
+                </value>
+                <value>
+                    <fullName>$ (Mexico)</fullName>
+                    <default>false</default>
+                    <label>$ (Mexico)</label>
+                </value>
+                <value>
+                    <fullName>₮ (Mongolia)</fullName>
+                    <default>false</default>
+                    <label>₮ (Mongolia)</label>
+                </value>
+                <value>
+                    <fullName>MT (Mozambique)</fullName>
+                    <default>false</default>
+                    <label>MT (Mozambique)</label>
+                </value>
+                <value>
+                    <fullName>$ (Namibia)</fullName>
+                    <default>false</default>
+                    <label>$ (Namibia)</label>
+                </value>
+                <value>
+                    <fullName>₨ (Nepal)</fullName>
+                    <default>false</default>
+                    <label>₨ (Nepal)</label>
+                </value>
+                <value>
+                    <fullName>ƒ (Netherlands)</fullName>
+                    <default>false</default>
+                    <label>ƒ (Netherlands)</label>
+                </value>
+                <value>
+                    <fullName>$ (New Zealand)</fullName>
+                    <default>false</default>
+                    <label>$ (New Zealand)</label>
+                </value>
+                <value>
+                    <fullName>C$ (Nicaragua)</fullName>
+                    <default>false</default>
+                    <label>C$ (Nicaragua)</label>
+                </value>
+                <value>
+                    <fullName>₦ (Nigeria)</fullName>
+                    <default>false</default>
+                    <label>₦ (Nigeria)</label>
+                </value>
+                <value>
+                    <fullName>kr (Norway)</fullName>
+                    <default>false</default>
+                    <label>kr (Norway)</label>
+                </value>
+                <value>
+                    <fullName>﷼ (Oman)</fullName>
+                    <default>false</default>
+                    <label>﷼ (Oman)</label>
+                </value>
+                <value>
+                    <fullName>₨ (Pakistan)</fullName>
+                    <default>false</default>
+                    <label>₨ (Pakistan)</label>
+                </value>
+                <value>
+                    <fullName>B/. (Panama)</fullName>
+                    <default>false</default>
+                    <label>B/. (Panama)</label>
+                </value>
+                <value>
+                    <fullName>Gs (Paraguay)</fullName>
+                    <default>false</default>
+                    <label>Gs (Paraguay)</label>
+                </value>
+                <value>
+                    <fullName>S/. (Peru)</fullName>
+                    <default>false</default>
+                    <label>S/. (Peru)</label>
+                </value>
+                <value>
+                    <fullName>₱ (Philippines)</fullName>
+                    <default>false</default>
+                    <label>₱ (Philippines)</label>
+                </value>
+                <value>
+                    <fullName>zł (Poland)</fullName>
+                    <default>false</default>
+                    <label>zł (Poland)</label>
+                </value>
+                <value>
+                    <fullName>﷼ (Qatar)</fullName>
+                    <default>false</default>
+                    <label>﷼ (Qatar)</label>
+                </value>
+                <value>
+                    <fullName>lei (Romania)</fullName>
+                    <default>false</default>
+                    <label>lei (Romania)</label>
+                </value>
+                <value>
+                    <fullName>₽ (Russia)</fullName>
+                    <default>false</default>
+                    <label>₽ (Russia)</label>
+                </value>
+                <value>
+                    <fullName>£ (Saint Helena)</fullName>
+                    <default>false</default>
+                    <label>£ (Saint Helena)</label>
+                </value>
+                <value>
+                    <fullName>﷼ (Saudi Arabia)</fullName>
+                    <default>false</default>
+                    <label>﷼ (Saudi Arabia)</label>
+                </value>
+                <value>
+                    <fullName>Дин. (Serbia)</fullName>
+                    <default>false</default>
+                    <label>Дин. (Serbia)</label>
+                </value>
+                <value>
+                    <fullName>₨ (Seychelles)</fullName>
+                    <default>false</default>
+                    <label>₨ (Seychelles)</label>
+                </value>
+                <value>
+                    <fullName>$ (Singapore)</fullName>
+                    <default>false</default>
+                    <label>$ (Singapore)</label>
+                </value>
+                <value>
+                    <fullName>$ (Solomon Islands)</fullName>
+                    <default>false</default>
+                    <label>$ (Solomon Islands)</label>
+                </value>
+                <value>
+                    <fullName>S (Somalia)</fullName>
+                    <default>false</default>
+                    <label>S (Somalia)</label>
+                </value>
+                <value>
+                    <fullName>R (South Africa)</fullName>
+                    <default>false</default>
+                    <label>R (South Africa)</label>
+                </value>
+                <value>
+                    <fullName>₨ (Sri Lanka)</fullName>
+                    <default>false</default>
+                    <label>₨ (Sri Lanka)</label>
+                </value>
+                <value>
+                    <fullName>kr (Sweden)</fullName>
+                    <default>false</default>
+                    <label>kr (Sweden)</label>
+                </value>
+                <value>
+                    <fullName>CHF (Switzerland)</fullName>
+                    <default>false</default>
+                    <label>CHF (Switzerland)</label>
+                </value>
+                <value>
+                    <fullName>$ (Suriname)</fullName>
+                    <default>false</default>
+                    <label>$ (Suriname)</label>
+                </value>
+                <value>
+                    <fullName>£ (Syria)</fullName>
+                    <default>false</default>
+                    <label>£ (Syria)</label>
+                </value>
+                <value>
+                    <fullName>NT$ (Taiwan)</fullName>
+                    <default>false</default>
+                    <label>NT$ (Taiwan)</label>
+                </value>
+                <value>
+                    <fullName>฿ (Thailand)</fullName>
+                    <default>false</default>
+                    <label>฿ (Thailand)</label>
+                </value>
+                <value>
+                    <fullName>TT$ (Trinidad and Tobago)</fullName>
+                    <default>false</default>
+                    <label>TT$ (Trinidad and Tobago)</label>
+                </value>
+                <value>
+                    <fullName>₺ (Turkey)</fullName>
+                    <default>false</default>
+                    <label>₺ (Turkey)</label>
+                </value>
+                <value>
+                    <fullName>$ (Tuvalu)</fullName>
+                    <default>false</default>
+                    <label>$ (Tuvalu)</label>
+                </value>
+                <value>
+                    <fullName>₴ (Ukraine)</fullName>
+                    <default>false</default>
+                    <label>₴ (Ukraine)</label>
+                </value>
+                <value>
+                    <fullName>£ (United Kingdom)</fullName>
+                    <default>false</default>
+                    <label>£ (United Kingdom)</label>
+                </value>
+                <value>
+                    <fullName>$ (United States)</fullName>
+                    <default>false</default>
+                    <label>$ (United States)</label>
+                </value>
+                <value>
+                    <fullName>$U (Uruguay)</fullName>
+                    <default>false</default>
+                    <label>$U (Uruguay)</label>
+                </value>
+                <value>
+                    <fullName>лв (Uzbekistan)</fullName>
+                    <default>false</default>
+                    <label>лв (Uzbekistan)</label>
+                </value>
+                <value>
+                    <fullName>Bs (Venezuela)</fullName>
+                    <default>false</default>
+                    <label>Bs (Venezuela)</label>
+                </value>
+                <value>
+                    <fullName>₫ (Viet Nam)</fullName>
+                    <default>false</default>
+                    <label>₫ (Viet Nam)</label>
+                </value>
+                <value>
+                    <fullName>﷼ (Yemen)</fullName>
+                    <default>false</default>
+                    <label>﷼ (Yemen)</label>
+                </value>
+                <value>
+                    <fullName>Z$ (Zimbabwe)</fullName>
+                    <default>false</default>
+                    <label>Z$ (Zimbabwe)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ExpenseDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expense Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ExpenseRemarks__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expense Remarks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sr_no__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sr no</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Expense Record</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Expense Record Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Expense Records</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
